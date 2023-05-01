@@ -9,13 +9,11 @@ public class VelocityDisplay : MonoBehaviour
     public Rigidbody player;
     public TMP_Text speedText;
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         float speed = player.velocity.magnitude;

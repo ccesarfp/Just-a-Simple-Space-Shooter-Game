@@ -7,20 +7,26 @@ public class Player : MonoBehaviour
     public float speed = 0.0001f; // velocidade de movimento do objeto
     public float maxSpeed = 2.0f;
     public float minSpeed = 1.9f;
-    public float rotationSpeed = 10f; // velocidade de rota��o do objeto 
+    public float rotationSpeed = 10f; // velocidade de rota��o do objeto
+
+    public float vidaInicial = 100f;
+    private float vida;
 
     private Rigidbody rb; // refer�ncia ao Rigidbody do objeto
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>(); // pega a refer�ncia do Rigidbody
+        vida = vidaInicial;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (vida <= 0f)
+        {
+            Debug.Log("O jogador morreu!");
+            // Adicione aqui a lógica para reiniciar o nível ou exibir uma mensagem na tela
+        }
     }
 
     void FixedUpdate()
@@ -68,9 +74,20 @@ public class Player : MonoBehaviour
         if (Mathf.Abs(rotateHorizontal) > 0f)
         {
             rb.velocity = rb.velocity.normalized * 0.95f;
+            if (Mathf.Abs(Input.GetAxis("Vertical")) < 0.01f)
+            {
+                rb.velocity = rb.velocity.normalized * 0.5f;
+            }
         }
 
         // Virar o objeto com base na entrada do usu�rio
         transform.Rotate(Vector3.up, rotateHorizontal * rotationSpeed * Time.deltaTime);
     }
+
+    public float getVida()
+    {
+        return vida;
+    }
+
+    
 }

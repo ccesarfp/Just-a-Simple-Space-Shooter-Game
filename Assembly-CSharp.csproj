@@ -56,8 +56,12 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Scripts/Player.cs" />
     <Compile Include="Assets/Scripts/VelocityDisplay.cs" />
+    <Compile Include="Assets/Scripts/LaserShot.cs" />
+    <Compile Include="Assets/Scripts/EnemyBehavior.cs" />
+    <Compile Include="Assets/Scripts/Player.cs" />
+    <Compile Include="Assets/Scripts/Life.cs" />
+    <Compile Include="Assets/Prefab/Laser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
@@ -772,6 +776,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{1AED6044-6F02-4999-DC11-3275A4FECAC6}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{4D17E155-6318-9C23-0125-0C98D6946C01}</Project>
+      <Name>NavMeshComponents</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
