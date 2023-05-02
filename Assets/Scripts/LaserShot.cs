@@ -11,7 +11,6 @@ public class LaserShot : MonoBehaviour
 
     void Start()
     {
-        //Destroy(gameObject, 3f);
     }
 
     void Update()
@@ -35,7 +34,7 @@ public class LaserShot : MonoBehaviour
         // Cria uma nova instância do projetil
         GameObject novoProjetil = Instantiate(laser, transform.position, transform.rotation);
 
-        // Aplica força ao projetil na direção da nave
+        // Aplica força ao projetil na direção da nave e atribui exclusão de objeto
         Rigidbody rb = novoProjetil.GetComponent<Rigidbody>();
         rb.AddForce(transform.forward * 400);
         Destroy(novoProjetil, 3f);

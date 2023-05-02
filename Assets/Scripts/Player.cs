@@ -4,24 +4,28 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float speed = 0.0001f; // velocidade de movimento do objeto
+    //Inicializa variáveis de movimento
+    public float speed = 0.01f; // velocidade de movimento do objeto
     public float maxSpeed = 2.0f;
     public float minSpeed = 1.9f;
-    public float rotationSpeed = 10f; // velocidade de rota��o do objeto
+    public float rotationSpeed = 10f; // velocidade de rotação do objeto
 
+    //Inicializa variáveis de vida
     public float vidaInicial = 100f;
     private float vida;
 
-    private Rigidbody rb; // refer�ncia ao Rigidbody do objeto
+    //Inicializa Rigibody
+    private Rigidbody rb; 
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>(); // pega a refer�ncia do Rigidbody
-        vida = vidaInicial;
+        rb = GetComponent<Rigidbody>(); //Pega a referência do Rigibody
+        vida = vidaInicial; //Atribui valor para vida atual
     }
 
     void Update()
     {
+        //Realiza gameover ##TODO
         if (vida <= 0f)
         {
             Debug.Log("O jogador morreu!");
@@ -31,46 +35,81 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        // cria um vetor de movimento baseado nas teclas pressionadas e na velocidade
+        //Cria um vetor de movimento baseado nas teclas pressionadas e na velocidade
         Vector3 movement = new Vector3();
         float playerSpeed = rb.velocity.magnitude;
-        float limitedSpeed = Mathf.Clamp(playerSpeed, minSpeed, maxSpeed);
 
         if (Input.GetKey(KeyCode.W))
         {
-            if (rb.velocity.magnitude <= maxSpeed)
+            if (playerSpeed <= maxSpeed)
             {
                 movement += transform.forward * speed;
-            } else
+            } else //Limita velocidade
             {
-                Vector3 oppositeForce = rb.velocity.normalized * maxSpeed;
-                rb.AddForce(-oppositeForce, ForceMode.Acceleration);
+                limitSpeed();
             }
             
         }
         if (Input.GetKey(KeyCode.S))
         {
-            if (rb.velocity.magnitude <= maxSpeed)
+            if (playerSpeed <= maxSpeed)
             {
                 movement -= transform.forward * speed;
             }
-            else
+            else //Limita velocidade
             {
-                Vector3 oppositeForce = rb.velocity.normalized * maxSpeed;
-                rb.AddForce(-oppositeForce, ForceMode.Acceleration);
+                limitSpeed();
             }
         }
 
+        //Aplica movimento
         rb.AddForce(movement, ForceMode.VelocityChange);
 
+        //Reduz velocidade, caso jogador não esteja andando para frente/trás
+        reduceVelocity();
+
+        //Captura se jogador está usando teclas de movimentação lateral.
+        float rotateHorizontal = Input.GetAxis("Horizontal");
+
+        //Reduz velocidade, caso jogador esteja usando teclas horizontais
+        reduceVelocityHorizontal(rotateHorizontal);
+
+        //Vira o objeto com base na entrada do usuário
+        transform.Rotate(Vector3.up, rotateHorizontal * rotationSpeed * Time.deltaTime);
+    }
+
+    /**
+     * @name limitSpeed()
+     * Realiza a limitação da velocidade do Player
+     */
+    public void limitSpeed()
+    {
+        Vector3 oppositeForce = rb.velocity.normalized * maxSpeed;
+        rb.AddForce(-oppositeForce, ForceMode.Acceleration);
+    }
+
+    /**
+     * @reduceVelocity()
+     * Verifica se o jogador está indo para frente/trás.
+     * Caso não esteja, irá reduzir a velocidade do mesmo.
+     */
+    public void reduceVelocity()
+    {
         if (Mathf.Abs(Input.GetAxis("Vertical")) < 0.01f)
         {
             rb.velocity *= 0.99f;
 
         }
+    }
 
-        float rotateHorizontal = Input.GetAxis("Horizontal");
-
+    /**
+     * @reduceVelocityHorizontal()
+     * @params:
+     *  float rotateHorizontal - Redebe valores gerados ao clicar em teclas de movimento horizontal
+     * Essa função é responsável por limitar a velocidade do jogador, caso ele precione teclas horizontais
+     */
+    public void reduceVelocityHorizontal(float rotateHorizontal)
+    {
         if (Mathf.Abs(rotateHorizontal) > 0f)
         {
             rb.velocity = rb.velocity.normalized * 0.95f;
@@ -79,11 +118,12 @@ public class Player : MonoBehaviour
                 rb.velocity = rb.velocity.normalized * 0.5f;
             }
         }
-
-        // Virar o objeto com base na entrada do usu�rio
-        transform.Rotate(Vector3.up, rotateHorizontal * rotationSpeed * Time.deltaTime);
     }
 
+    /**
+     * @name getVida()
+     * Retorna a vida atual do jogador
+     */
     public float getVida()
     {
         return vida;

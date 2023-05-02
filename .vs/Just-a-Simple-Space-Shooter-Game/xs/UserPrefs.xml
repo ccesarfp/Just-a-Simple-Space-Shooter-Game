@@ -1,22 +1,13 @@
 ﻿<Properties StartupConfiguration="{4CB6CF40-3488-12FB-1905-8D1C625D5BEC}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Prefab/Laser.cs">
-    <Files>
-      <File FileName="Assets/Scripts/VelocityDisplay.cs" Line="9" Column="5" />
-      <File FileName="Assets/Scripts/Player.cs" Line="90" Column="6" />
-      <File FileName="Assets/Scripts/laserShot.cs" Line="43" Column="1" />
-      <File FileName="Assets/Scripts/EnemyBehavior.cs" Line="7" Column="31" />
-      <File FileName="Assets/Scripts/Life.cs" Line="16" Column="1" />
-      <File FileName="Assets/Scripts/Laser.cs" Line="23" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Just-a-Simple-Space-Shooter-Game" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Prefab" expanded="True">
-                <Node name="Laser.cs" selected="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="Life.cs" selected="True" />
               </Node>
-              <Node name="Scripts" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -25,7 +16,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="479799a6-2167-4168-930f-022340f66c01" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d1b3e7ae-3636-49bf-a46d-7a3dfc63a03e" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

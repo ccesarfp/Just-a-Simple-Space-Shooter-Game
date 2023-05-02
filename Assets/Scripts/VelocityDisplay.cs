@@ -5,7 +5,7 @@ using TMPro;
 
 public class VelocityDisplay : MonoBehaviour
 {
-
+    //Inicializa variáveis
     public Rigidbody player;
     public TMP_Text speedText;
 
@@ -16,9 +16,10 @@ public class VelocityDisplay : MonoBehaviour
 
     void Update()
     {
+        //Captura velocidade
         float speed = player.velocity.magnitude;
 
-        // Atualize o texto com a velocidade atual do objeto
+        //Atualiza o texto com a velocidade atual do objeto
         speedText.text = speed.ToString("0.0");
     }
 }
