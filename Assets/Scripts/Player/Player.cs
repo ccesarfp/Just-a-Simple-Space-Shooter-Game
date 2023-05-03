@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
     //Inicializa variáveis de movimento
-    public float speed = 0.01f; // velocidade de movimento do objeto
-    public float maxSpeed = 2.0f;
-    public float minSpeed = 1.9f;
-    public float rotationSpeed = 10f; // velocidade de rotação do objeto
+    public float speed = 0.02f; // velocidade de movimento do objeto
+    public float maxSpeed = 3.0f;
+    public float minSpeed = 2.9f;
+    public float rotationSpeed = 25f; // velocidade de rotação do objeto
 
     //Inicializa variáveis de vida
     public float vidaInicial = 100f;
-    private float vida;
+    public float vida;
 
     //Inicializa Rigibody
     private Rigidbody rb; 
@@ -29,8 +30,7 @@ public class Player : MonoBehaviour
         //Realiza gameover ##TODO
         if (vida <= 0f)
         {
-            Debug.Log("O jogador morreu!");
-            // Adicione aqui a lógica para reiniciar o nível ou exibir uma mensagem na tela
+            SceneManager.LoadScene("GameOver");
         }
     }
 
@@ -130,5 +130,16 @@ public class Player : MonoBehaviour
         return vida;
     }
 
-    
+    public void perderVida()
+    {
+        vida = vida - 5f;
+    }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.CompareTag("Laser_E"))
+        {
+            perderVida();
+        }
+    }
 }

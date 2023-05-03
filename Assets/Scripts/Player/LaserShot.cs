@@ -8,9 +8,11 @@ public class LaserShot : MonoBehaviour
     public float velocidadeProjetil = 10; // Velocidade do projetil
     public float intervaloDisparo = 1; // Tempo de intervalo entre os disparos
     private float tempoUltimoDisparo; // Hora do último disparo
+    private AudioSource sound;
 
     void Start()
     {
+        sound = GetComponent<AudioSource>();
         int playerLayer = LayerMask.NameToLayer("Player");
         int enemyLayer = LayerMask.NameToLayer("EnemyLaser");
         Physics.IgnoreLayerCollision(gameObject.layer, enemyLayer);
@@ -34,6 +36,7 @@ public class LaserShot : MonoBehaviour
 
     private void DispararProjetil()
     {
+        sound.Play();
         // Cria uma nova instância do projetil
         GameObject novoProjetil = Instantiate(laser, transform.position, transform.rotation);
 

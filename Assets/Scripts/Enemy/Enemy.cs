@@ -33,7 +33,6 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Laser_P")) //Se o inimigo colidir com o tiro do player
         {
             enemyHP = enemyHP - 1; //Ele perde 1 de HP
-            
         }
     }
 }

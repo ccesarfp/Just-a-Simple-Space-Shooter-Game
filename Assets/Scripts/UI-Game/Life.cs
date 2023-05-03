@@ -19,6 +19,6 @@ public class Life : MonoBehaviour
     {
         //Atribui a vida e apresenta para o jogador
         vida = player.getVida();
-        lifeText.SetText("Vida: " + vida.ToString());
+        lifeText.SetText("Vida: " + vida.ToString() + "%");
     }
 }

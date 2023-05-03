@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EnemyHitLaser : MonoBehaviour
 {
-
+    private AudioSource sound;
 
     void Start()
     {
-
+        sound = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -22,11 +22,12 @@ public class EnemyHitLaser : MonoBehaviour
      *  Collision collision - informação de colisão
      * Configura evento de colisão do laser
      */
-    public void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider collider)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collider.gameObject.CompareTag("Player"))
         {
-            //Debug.Log(LayerMask.NameToLayer("Player"));
+            sound.Play();
             Destroy(gameObject);
         }
     }

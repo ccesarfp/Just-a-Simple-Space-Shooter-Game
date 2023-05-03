@@ -1,16 +1,10 @@
 ﻿<Properties StartupConfiguration="{4CB6CF40-3488-12FB-1905-8D1C625D5BEC}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI-Menu/ExitGame.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/Player.cs">
     <Files>
-      <File FileName="Assets/Scripts/HitLaser.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EnemyHitLaser.cs" Line="30" Column="1" />
-      <File FileName="Assets/Scripts/EnemyLaser.cs" Line="55" Column="14" />
-      <File FileName="Assets/Scripts/LaserShot.cs" Line="16" Column="38" />
-      <File FileName="Assets/StarfieldMaterials/Scripts/Move.cs" Line="9" Column="9" />
-      <File FileName="Assets/Scripts/Player.cs" Line="24" Column="45" />
-      <File FileName="Assets/Scripts/Enemy.cs" Line="15" Column="1" />
-      <File FileName="Assets/Scripts/UI-Title/PlayGame.cs" Line="8" Column="5" />
-      <File FileName="Assets/Scripts/UI-Menu/BackToMenu.cs" Line="8" Column="5" />
-      <File FileName="Assets/Scripts/UI-Menu/ExitGame.cs" Line="9" Column="28" />
+      <File FileName="Assets/Scripts/Enemy/EnemyLaser.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI-Game/Life.cs" Line="22" Column="57" />
+      <File FileName="Assets/Scripts/UI-Game/VelocityDisplay.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/Player.cs" Line="135" Column="23" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,9 +12,11 @@
           <Node name="Just-a-Simple-Space-Shooter-Game" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="UI-Menu" expanded="True">
-                  <Node name="ExitGame.cs" selected="True" />
+                <Node name="Enemy" expanded="True" />
+                <Node name="Player" expanded="True">
+                  <Node name="Player.cs" selected="True" />
                 </Node>
+                <Node name="UI-Menu" expanded="True" />
               </Node>
               <Node name="StarfieldMaterials" expanded="True">
                 <Node name="Scripts" expanded="True" />
@@ -33,7 +29,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="543ae416-c683-4534-b7a9-58cc1fd5ce65" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="63952c1c-5a33-44ea-9fba-2e9b380e5e26" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

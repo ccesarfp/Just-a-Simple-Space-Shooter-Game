@@ -14,9 +14,12 @@ public class EnemyLaser : MonoBehaviour
     private GameObject player;
     private Transform playerDirection;
 
+    private AudioSource sound;
+
     // Start is called before the first frame update
     void Start()
     {
+        sound = GetComponent<AudioSource>();
         player = GameObject.FindWithTag("Player");
         enemyBehavior = gameObject.AddComponent<EnemyBehavior>();
 
@@ -35,6 +38,8 @@ public class EnemyLaser : MonoBehaviour
         {
             if (Time.time > tempoUltimoDisparo + intervaloDisparo)
             {
+                sound.Play();
+
                 Vector3 direction = (playerDirection.position - transform.position).normalized;
 
                 // Dispara o projetil
