@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 7112624417442227108}
   - component: {fileID: 7112624417442227109}
   - component: {fileID: 7112624417442227110}
-  m_Layer: 0
+  - component: {fileID: -664640201165448432}
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -130,3 +131,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   minDistance: 10
+  laser: {fileID: 0}
+  velocidadeProjetil: 10
+  intervaloDisparo: 1
+--- !u!114 &-664640201165448432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7959118283886435071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10fcb79fdc7c34252af6e654f57c7e17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 7959118283886435071}
+  item: {fileID: 0}
+  enemyHP: 3

@@ -1,12 +1,19 @@
 ﻿<Properties StartupConfiguration="{4CB6CF40-3488-12FB-1905-8D1C625D5BEC}|">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HitLaser.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Life.cs" Line="25" Column="1" />
+      <File FileName="Assets/Scripts/LaserShot.cs" Line="14" Column="9" />
+      <File FileName="Assets/Scripts/EnemyLaser.cs" Line="20" Column="66" />
+      <File FileName="Assets/Scripts/Laser.cs" Line="30" Column="10" />
+      <File FileName="Assets/Scripts/EnemyHitLaser.cs" Line="24" Column="8" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Just-a-Simple-Space-Shooter-Game" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Life.cs" selected="True" />
+                <Node name="HitLaser.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -16,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d1b3e7ae-3636-49bf-a46d-7a3dfc63a03e" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9b315f70-29ef-4bfb-bca7-dcd6636c4106" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

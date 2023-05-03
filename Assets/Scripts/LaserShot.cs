@@ -11,6 +11,7 @@ public class LaserShot : MonoBehaviour
 
     void Start()
     {
+        
     }
 
     void Update()
