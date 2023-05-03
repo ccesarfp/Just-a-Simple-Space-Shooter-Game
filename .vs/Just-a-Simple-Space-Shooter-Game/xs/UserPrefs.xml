@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{4CB6CF40-3488-12FB-1905-8D1C625D5BEC}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI-Menu/BackToMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI-Menu/ExitGame.cs">
     <Files>
       <File FileName="Assets/Scripts/HitLaser.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/EnemyHitLaser.cs" Line="30" Column="1" />
@@ -10,7 +10,7 @@
       <File FileName="Assets/Scripts/Enemy.cs" Line="15" Column="1" />
       <File FileName="Assets/Scripts/UI-Title/PlayGame.cs" Line="8" Column="5" />
       <File FileName="Assets/Scripts/UI-Menu/BackToMenu.cs" Line="8" Column="5" />
-      <File FileName="Assets/Scripts/UI-Menu/ExitGame.cs" Line="7" Column="5" />
+      <File FileName="Assets/Scripts/UI-Menu/ExitGame.cs" Line="9" Column="28" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,7 +19,7 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="UI-Menu" expanded="True">
-                  <Node name="BackToMenu.cs" selected="True" />
+                  <Node name="ExitGame.cs" selected="True" />
                 </Node>
               </Node>
               <Node name="StarfieldMaterials" expanded="True">
