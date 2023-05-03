@@ -1,11 +1,16 @@
 ﻿<Properties StartupConfiguration="{4CB6CF40-3488-12FB-1905-8D1C625D5BEC}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HitLaser.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI-Menu/BackToMenu.cs">
     <Files>
-      <File FileName="Assets/Scripts/Life.cs" Line="25" Column="1" />
-      <File FileName="Assets/Scripts/LaserShot.cs" Line="14" Column="9" />
-      <File FileName="Assets/Scripts/EnemyLaser.cs" Line="20" Column="66" />
-      <File FileName="Assets/Scripts/Laser.cs" Line="30" Column="10" />
-      <File FileName="Assets/Scripts/EnemyHitLaser.cs" Line="24" Column="8" />
+      <File FileName="Assets/Scripts/HitLaser.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/EnemyHitLaser.cs" Line="30" Column="1" />
+      <File FileName="Assets/Scripts/EnemyLaser.cs" Line="55" Column="14" />
+      <File FileName="Assets/Scripts/LaserShot.cs" Line="16" Column="38" />
+      <File FileName="Assets/StarfieldMaterials/Scripts/Move.cs" Line="9" Column="9" />
+      <File FileName="Assets/Scripts/Player.cs" Line="24" Column="45" />
+      <File FileName="Assets/Scripts/Enemy.cs" Line="15" Column="1" />
+      <File FileName="Assets/Scripts/UI-Title/PlayGame.cs" Line="8" Column="5" />
+      <File FileName="Assets/Scripts/UI-Menu/BackToMenu.cs" Line="8" Column="5" />
+      <File FileName="Assets/Scripts/UI-Menu/ExitGame.cs" Line="7" Column="5" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +18,12 @@
           <Node name="Just-a-Simple-Space-Shooter-Game" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="HitLaser.cs" selected="True" />
+                <Node name="UI-Menu" expanded="True">
+                  <Node name="BackToMenu.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="StarfieldMaterials" expanded="True">
+                <Node name="Scripts" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -23,7 +33,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9b315f70-29ef-4bfb-bca7-dcd6636c4106" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="543ae416-c683-4534-b7a9-58cc1fd5ce65" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
