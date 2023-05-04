@@ -6,7 +6,7 @@ public class EnemyLaser : MonoBehaviour
 {
     public GameObject enemyLaser; // Prefab do projetil a ser disparado
     public float velocidadeProjetil = 10; // Velocidade do projetil
-    public float intervaloDisparo = 1; // Tempo de intervalo entre os disparos
+    public float intervaloDisparo = 5; // Tempo de intervalo entre os disparos
     private float tempoUltimoDisparo; // Hora do último disparo
 
     private bool playerDetected = false;

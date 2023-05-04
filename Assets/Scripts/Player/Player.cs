@@ -13,7 +13,9 @@ public class Player : MonoBehaviour
 
     //Inicializa variáveis de vida
     public float vidaInicial = 100f;
-    public float vida;
+    private float vida;
+
+    private float points = 0;
 
     //Inicializa Rigibody
     private Rigidbody rb; 
@@ -133,6 +135,16 @@ public class Player : MonoBehaviour
     public void perderVida()
     {
         vida = vida - 5f;
+    }
+
+    public float getPoints()
+    {
+        return points;
+    }
+
+    public void aumentarPoints(float point)
+    {
+        points += point;
     }
 
     private void OnTriggerEnter(Collider collider)

@@ -22,9 +22,9 @@ public class HitLaser : MonoBehaviour
      *  Collision collision - informação de colisão
      * Configura evento de colisão do laser
      */
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collider.gameObject.CompareTag("Enemy"))
         {
             sound.Play();
             Destroy(gameObject);

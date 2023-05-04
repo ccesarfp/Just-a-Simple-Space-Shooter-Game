@@ -1,10 +1,13 @@
 ﻿<Properties StartupConfiguration="{4CB6CF40-3488-12FB-1905-8D1C625D5BEC}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/Player.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/HitLaser.cs">
     <Files>
-      <File FileName="Assets/Scripts/Enemy/EnemyLaser.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UI-Game/Life.cs" Line="22" Column="57" />
+      <File FileName="Assets/Scripts/Player/HitLaser.cs" Line="3" Column="19" />
+      <File FileName="Assets/Scripts/UI-Game/Points.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI-Menu/ExitGame.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI-Menu/BackToMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI-Menu/PlayGame.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/UI-Game/VelocityDisplay.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Player/Player.cs" Line="135" Column="23" />
+      <File FileName="Assets/Scripts/UI-Game/Life.cs" Line="25" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,12 +17,9 @@
               <Node name="Scripts" expanded="True">
                 <Node name="Enemy" expanded="True" />
                 <Node name="Player" expanded="True">
-                  <Node name="Player.cs" selected="True" />
+                  <Node name="HitLaser.cs" selected="True" />
                 </Node>
-                <Node name="UI-Menu" expanded="True" />
-              </Node>
-              <Node name="StarfieldMaterials" expanded="True">
-                <Node name="Scripts" expanded="True" />
+                <Node name="UI-Game" expanded="True" />
               </Node>
             </Node>
           </Node>
